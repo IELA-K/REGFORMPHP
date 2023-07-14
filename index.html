@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+   <title>Regisration Form </title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href='#home'>
+            Registration Form
+        </a>
+        
+        <ul>
+            <li><a href='index.html'>Sign Up</a></li>
+            <li><a href='login.html'>Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="form">
+        <header>Regisration Form</header>
+        <h5>Already have an account? Log in <a href = 'login.html'>here</a></h6>
+
+        <form action="submit.php" class="form" method="post" enctype="multipart/form-data">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name (FN, SN)</label>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" name ="birthdate" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" name="Phonenumber" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="Gender">Gender</label>
+                            <select id="Gender" name="gender" required>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" name="password" placeholder="Enter Password" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="country">Region</label>
+                            <select name="region" id="region" required>
+                                <option value="">Select Region</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="state">Provinces</label>
+                            <select id = "state" name="state" required>
+                                <option value="">Select Province </option>
+                            </select>
+                        </div>
+
+                        <div class="input-field"> 
+                            <label for="barangay">City</label>
+                            <select id = "city" name ="city" required> 
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Barangay and Street Address</label>
+                            <select id="brgy" name="barangay" required>
+                                <option value="">Select Barangay</option>
+                              </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Postal Code</label>
+                            <input type="number" name="zip" placeholder="Enter your postal code" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="AddressType">Type of Address</label>
+                            <select id="AddressType" name ="addresstype" required>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Upload your Resume:</label>
+                            <input type="file" name="resume" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="VeteranStatus">Veteran Status</label>
+                            <select id="VeteranStatus" name="veteranS"required>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="Disabilities">Disabilities</label>
+                            <select id ="Disabilities" name ="disability"required>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="Race">Race</label>
+                            <select id ="Race" name ="race"required>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <h3>By clicking "Submit" I agree that:</h3>
+                            <h6>I have read and accepted the User Agreement and Privacy Policy,<br>
+                            I may receive communications from SO and can change my notification preferences, and<br>
+                            I am at least 18 years old.<h6>
+                            <div class="column">
+                                <label class="checkcontainer">I Agree
+                                  <input type="checkbox" name="terms_agree" Value="yes" required />
+                                  <span class="checkmark"></span>
+                                </label>
+                            </div>
+                          </div>		
+
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <span class="btnText2">Back</span>
+                            </div>
+                            
+                            <button class="sumbit" name ="submit" onclick="validateForm(event)">
+                                <span class="btnText2">Submit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+            
+        </form>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
